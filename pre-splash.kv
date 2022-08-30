@@ -1,0 +1,20 @@
+MDScreen:
+    name: 'pre-splash'
+    on_enter: self.ids.progress.start()
+
+    GridLayout:
+        cols: 1
+        canvas:
+            Color:
+                rgba: (1, 1, 1, 1)
+            Rectangle:
+                source: './Assets/SplashScreen.jpg'
+                size: self.size
+    BoxLayout:
+        pos_hint: {'center_y':.2, 'center_x':.5}
+        padding: '10dp'
+        size_hint_x: .7
+        MDProgressBar:
+            id: progress
+            color: 'white'
+            value: 0

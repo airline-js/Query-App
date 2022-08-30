@@ -1,0 +1,36 @@
+MDScreen:
+    name: 'login'
+    GridLayout:
+        cols: 1
+        canvas:
+            Color:
+                rgba: (1, 1, 1, 1)
+            Rectangle:
+                source: 'Assets/HomeScreen.png'
+                size: self.size
+
+    MDTextFieldRound:
+        id: rounded_button
+        hint_text: "Enter Your Query Here"
+        font_size: 15
+        font_color:  1, 1, 1, 0.5
+        multiline: False
+        required: True
+        halign:"center"
+        size_hint: None, None
+        width: 200
+        pos_hint: {"center_x":0.5, "center_y":0.15}
+        color_mode: 'accent'
+        cursor_color: 1, 1, 1, 0.2
+        foreground_color: 1, 1, 1, 0.5
+        normal_color: 1, 1, 1, 0.2
+
+    MDFillRoundFlatButton:
+        text: "Search"
+        pos_hint: {"center_x":0.5, "center_y":0.05}
+        on_press: app.search_query()
+
+    Image:
+        source: "Assets/signature.png"
+        pos_hint: {"center_x":0.5, "center_y":0.43}
+        size_hint: .5, .5
